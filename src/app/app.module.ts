@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { DataService } from './data.service';
+import { Pgee2017Module } from './pgee2017/pgee2017.module';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { DataService } from './data.service';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    Pgee2017Module
   ],
   providers: [DataService],
   bootstrap: [AppComponent]

@@ -1,0 +1,60 @@
+<div class="container">
+	<div class="row">
+		<div class="col-sm-12">
+			<table class="cs-table table table-striped">
+				<thead>
+					<tr>
+						<th>msc</th>
+						<th>zawodnik</th>
+						<th>klub</th>
+						<th>średnia</th>
+						<th>pkt</th>
+						<th>bon</th>
+						<th>biegi</th>
+						<th>3p</th>
+						<th>2p</th>
+						<th>1p</th>
+						<th>0p</th>
+						<th>D</th>
+						<th>W</th>
+						<th>U</th>
+						<th>T</th>
+						<th>%ZW</th>
+						<th>DOM</th>
+						<th>WYJAZD</th>
+						<th>TOR A</th>
+						<th>TOR B</th>
+						<th>TOR C</th>
+						<th>TOR D</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr *ngFor="let rider of stats; let i = index">
+						<td> {{rider.MSC}} </td>
+						<td> {{rider.ZAWODNIK}} </td>
+						<td> {{rider.KLUB}} </td>
+						<td> {{rider.SREDNIA}} </td>
+						<td> {{rider.PKT}} </td>
+						<td> {{rider.BON}} </td>
+						<td> {{rider.BIEGI}} </td>
+						<td> {{rider.P3}} </td>
+						<td> {{rider.P2}} </td>
+						<td> {{rider.P1}} </td>
+						<td> {{rider.P0}} </td>
+						<td> {{rider.D}} </td>
+						<td> {{rider.W}} </td>
+						<td> {{rider.U}} </td>
+						<td> {{rider.T}} </td>
+						<td> {{rider.ZW}} </td>
+						<td> {{rider.DOM}} </td>
+						<td> {{rider.WYJAZD}} </td>
+						<td> {{rider.TORA}} </td>
+						<td> {{rider.TORB}} </td>
+						<td> {{rider.TORC}} </td>
+						<td> {{rider.TORD}} </td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
