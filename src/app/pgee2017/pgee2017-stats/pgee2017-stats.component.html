@@ -1,7 +1,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-sm-12">
-			<table class="cs-table table table-striped">
+			<table class="cs-table table table-bordered table-striped">
 				<thead>
 					<tr>
 						<th>msc</th>
@@ -11,10 +11,10 @@
 						<th>pkt</th>
 						<th>bon</th>
 						<th>biegi</th>
-						<th>3p</th>
-						<th>2p</th>
-						<th>1p</th>
-						<th>0p</th>
+						<th>3</th>
+						<th>2</th>
+						<th>1</th>
+						<th>0</th>
 						<th>D</th>
 						<th>W</th>
 						<th>U</th>
@@ -22,10 +22,10 @@
 						<th>%ZW</th>
 						<th>DOM</th>
 						<th>WYJAZD</th>
-						<th>TOR A</th>
-						<th>TOR B</th>
-						<th>TOR C</th>
-						<th>TOR D</th>
+						<th>A</th>
+						<th>B</th>
+						<th>C</th>
+						<th>D</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -33,7 +33,7 @@
 						<td> {{rider.MSC}} </td>
 						<td> {{rider.ZAWODNIK}} </td>
 						<td> {{rider.KLUB}} </td>
-						<td> {{rider.SREDNIA}} </td>
+						<td> {{rider.SREDNIA | number:'1.3':'pl'}} </td>
 						<td> {{rider.PKT}} </td>
 						<td> {{rider.BON}} </td>
 						<td> {{rider.BIEGI}} </td>
@@ -45,13 +45,13 @@
 						<td> {{rider.W}} </td>
 						<td> {{rider.U}} </td>
 						<td> {{rider.T}} </td>
-						<td> {{rider.ZW | percent:'2.1':'pl'}} </td>
-						<td> {{rider.DOM}} </td>
-						<td> {{rider.WYJAZD}} </td>
-						<td> {{rider.TORA}} </td>
-						<td> {{rider.TORB}} </td>
-						<td> {{rider.TORC}} </td>
-						<td> {{rider.TORD}} </td>
+						<td> {{rider.ZW | percent:'2.0':'pl'}} </td>
+						<td> {{rider.DOM | number:'1.3':'pl'}} </td>
+						<td> {{rider.WYJAZD | number:'1.3':'pl'}} </td>
+						<td> {{rider.TORA | number:'1.3':'pl'}} </td>
+						<td> {{rider.TORB | number:'1.3':'pl'}} </td>
+						<td> {{rider.TORC | number:'1.3':'pl'}} </td>
+						<td> {{rider.TORD | number:'1.3':'pl'}} </td>
 					</tr>
 				</tbody>
 			</table>
