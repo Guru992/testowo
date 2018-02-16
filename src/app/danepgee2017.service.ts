@@ -3,7 +3,7 @@ import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 
 @Injectable()
-export class DataService {
+export class Danepgee2017Service {
 	result;
   constructor(private _http: Http) {}
   	getPgee2017() {

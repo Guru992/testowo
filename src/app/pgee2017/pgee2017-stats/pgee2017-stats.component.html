@@ -29,7 +29,7 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr *ngFor="let rider of stats; let i = index">
+					<tr *ngFor="let rider of pgee2017; let i = index">
 						<td> {{rider.MSC}} </td>
 						<td> {{rider.ZAWODNIK}} </td>
 						<td> {{rider.KLUB}} </td>
@@ -45,7 +45,7 @@
 						<td> {{rider.W}} </td>
 						<td> {{rider.U}} </td>
 						<td> {{rider.T}} </td>
-						<td> {{rider.ZW}} </td>
+						<td> {{rider.ZW | percent:'2.1':'pl'}} </td>
 						<td> {{rider.DOM}} </td>
 						<td> {{rider.WYJAZD}} </td>
 						<td> {{rider.TORA}} </td>
