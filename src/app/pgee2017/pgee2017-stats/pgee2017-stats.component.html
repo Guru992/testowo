@@ -1,11 +1,29 @@
+<gs-header>
+	<p levels>Stats</p>
+
+	<div content>
+		<p>TEST</p>
+	</div>
+</gs-header>
+
 <div class="container">
 	<div class="row">
 		<div class="col-sm-12">
 			<table class="cs-table table table-bordered table-striped">
 				<thead>
 					<tr>
-						<th>msc</th>
-						<th>zawodnik</th>
+						<th [class.active]="order === 'msc'"
+							(click)="setOrder('msc')">
+							msc
+							<span [hidden]="reverse">▼</span>
+							<span [hidden]="!reverse">▲</span>
+						</th>
+						<th [class.active]="order === 'zawodnik'"
+							(click)="setOrder('zawodnik')">
+							zawodnik
+							<span [hidden]="reverse">▼</span>
+							<span [hidden]="!reverse">▲</span>
+        				</th>
 						<th>klub</th>
 						<th>średnia</th>
 						<th>pkt</th>
