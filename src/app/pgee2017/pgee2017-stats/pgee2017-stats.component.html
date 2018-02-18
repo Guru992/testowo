@@ -12,42 +12,142 @@
 			<table class="cs-table table table-bordered table-striped">
 				<thead>
 					<tr>
-						<th [class.active]="order === 'msc'"
-							(click)="setOrder('msc')">
-							msc
+						<th [class.active]="order === 'MSC'"
+							(click)="setOrder('MSC')">
+							MSC<br>
 							<span [hidden]="reverse">▼</span>
 							<span [hidden]="!reverse">▲</span>
 						</th>
-						<th [class.active]="order === 'zawodnik'"
-							(click)="setOrder('zawodnik')">
-							zawodnik
+						<th [class.active]="order === 'ZAWODNIK'"
+							(click)="setOrder('ZAWODNIK')">
+							ZAWODNIK<br>
 							<span [hidden]="reverse">▼</span>
 							<span [hidden]="!reverse">▲</span>
         				</th>
-						<th>klub</th>
-						<th>średnia</th>
-						<th>pkt</th>
-						<th>bon</th>
-						<th>biegi</th>
-						<th>3</th>
-						<th>2</th>
-						<th>1</th>
-						<th>0</th>
-						<th>D</th>
-						<th>W</th>
-						<th>U</th>
-						<th>T</th>
-						<th>%ZW</th>
-						<th>DOM</th>
-						<th>WYJAZD</th>
-						<th>A</th>
-						<th>B</th>
-						<th>C</th>
-						<th>D</th>
+        				<th [class.active]="order === 'KLUB'"
+							(click)="setOrder('KLUB')">
+							KLUB<br>
+							<span [hidden]="reverse">▼</span>
+							<span [hidden]="!reverse">▲</span>
+						</th>
+						<th [class.active]="order === 'SREDNIA'"
+							(click)="setOrder('SREDNIA')">
+							ŚREDNIA<br>
+							<span [hidden]="reverse">▼</span>
+							<span [hidden]="!reverse">▲</span>
+        				</th>
+        				<th [class.active]="order === 'PKT'"
+							(click)="setOrder('PKT')">
+							PKT<br>
+							<span [hidden]="reverse">▼</span>
+							<span [hidden]="!reverse">▲</span>
+						</th>
+						<th [class.active]="order === 'BON'"
+							(click)="setOrder('BON')">
+							BON<br>
+							<span [hidden]="reverse">▼</span>
+							<span [hidden]="!reverse">▲</span>
+        				</th>
+        				<th [class.active]="order === 'BIEGI'"
+							(click)="setOrder('BIEGI')">
+							BIEGI<br>
+							<span [hidden]="reverse">▼</span>
+							<span [hidden]="!reverse">▲</span>
+						</th>
+						<th [class.active]="order === 'P3'"
+							(click)="setOrder('P3')">
+							3<br>
+							<span [hidden]="reverse">▼</span>
+							<span [hidden]="!reverse">▲</span>
+        				</th>
+        				<th [class.active]="order === 'P2'"
+							(click)="setOrder('P2')">
+							2<br>
+							<span [hidden]="reverse">▼</span>
+							<span [hidden]="!reverse">▲</span>
+						</th>
+						<th [class.active]="order === 'P1'"
+							(click)="setOrder('P1')">
+							1<br>
+							<span [hidden]="reverse">▼</span>
+							<span [hidden]="!reverse">▲</span>
+        				</th>
+        				<th [class.active]="order === 'P0'"
+							(click)="setOrder('P0')">
+							0<br>
+							<span [hidden]="reverse">▼</span>
+							<span [hidden]="!reverse">▲</span>
+						</th>
+						<th [class.active]="order === 'D'"
+							(click)="setOrder('D')">
+							D<br>
+							<span [hidden]="reverse">▼</span>
+							<span [hidden]="!reverse">▲</span>
+        				</th>
+        				<th [class.active]="order === 'W'"
+							(click)="setOrder('W')">
+							W<br>
+							<span [hidden]="reverse">▼</span>
+							<span [hidden]="!reverse">▲</span>
+						</th>
+						<th [class.active]="order === 'U'"
+							(click)="setOrder('U')">
+							U<br>
+							<span [hidden]="reverse">▼</span>
+							<span [hidden]="!reverse">▲</span>
+        				</th>
+        				<th [class.active]="order === 'T'"
+							(click)="setOrder('T')">
+							T<br>
+							<span [hidden]="reverse">▼</span>
+							<span [hidden]="!reverse">▲</span>
+						</th>
+						<th [class.active]="order === 'ZW'"
+							(click)="setOrder('ZW')">
+							%ZW<br>
+							<span [hidden]="reverse">▼</span>
+							<span [hidden]="!reverse">▲</span>
+        				</th>
+        				<th [class.active]="order === 'DOM'"
+							(click)="setOrder('DOM')">
+							DOM<br>
+							<span [hidden]="reverse">▼</span>
+							<span [hidden]="!reverse">▲</span>
+						</th>
+						<th [class.active]="order === 'WYJAZD'"
+							(click)="setOrder('WYJAZD')">
+							WYJAZD<br>
+							<span [hidden]="reverse">▼</span>
+							<span [hidden]="!reverse">▲</span>
+        				</th>
+        				<th [class.active]="order === 'TORA'"
+							(click)="setOrder('TORA')">
+							A<br>
+							<span [hidden]="reverse">▼</span>
+							<span [hidden]="!reverse">▲</span>
+						</th>
+						<th [class.active]="order === 'TORB'"
+							(click)="setOrder('TORB')">
+							B<br>
+							<span [hidden]="reverse">▼</span>
+							<span [hidden]="!reverse">▲</span>
+        				</th>
+        				<th [class.active]="order === 'TORC'"
+							(click)="setOrder('TORC')">
+							C<br>
+							<span [hidden]="reverse">▼</span>
+							<span [hidden]="!reverse">▲</span>
+						</th>
+						<th [class.active]="order === 'TORD'"
+							(click)="setOrder('TORD')">
+							D<br>
+							<span [hidden]="reverse">▼</span>
+							<span [hidden]="!reverse">▲</span>
+        				</th>
 					</tr>
 				</thead>
 				<tbody>
-					<tr *ngFor="let rider of pgee2017; let i = index">
+					<tr *ngFor="let rider of pgee2017 | orderBy: order:reverse; let i = index">
 						<td> {{rider.MSC}} </td>
 						<td> {{rider.ZAWODNIK}} </td>
 						<td> {{rider.KLUB}} </td>

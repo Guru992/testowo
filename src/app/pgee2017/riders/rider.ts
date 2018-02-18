@@ -1,5 +1,5 @@
 export interface Rider {
-		MSC: number;
+		MSC: string;
 		ZAWODNIK:string;
 		KLUB:string;
 		SREDNIA:number;
