@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Rider } from "../riders/rider";
+import { Rider } from "../interfaces/rider";
 import { Danepgee2017Service } from '../../danepgee2017.service';
 import { OrderPipe } from 'ngx-order-pipe';
 
@@ -18,8 +18,10 @@ result: number[];
   {
     this._danePgee2017Service.getPgee2017().subscribe((response) => {
     this.pgee2017 = orderPipe.transform(response, 'MSC');
-  })
   }
+  )
+  }
+  
 
   	/*this._danePgee2017Service.getPgee2017().subscribe(response => this.pgee2017 = response);
     let copy = this.pgee2017.slice();

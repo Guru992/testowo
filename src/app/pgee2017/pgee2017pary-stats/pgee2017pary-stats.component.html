@@ -1,0 +1,157 @@
+<gs-header>
+	<p levels>Stats</p>
+
+	<div content>
+		<p>TEST</p>
+	</div>
+</gs-header>
+
+<div class="container">
+	<div class="row">
+		<div class="col-sm-12">
+			<table class="cs-table table table-bordered table-striped">
+				<thead>
+					<tr>
+						<th [class.active]="order === 'PARA'"
+							(click)="setOrder('PARA')">
+							PARA<br>
+							<span [hidden]="reverse">▼</span>
+							<span [hidden]="!reverse">▲</span>
+						</th>
+						<th [class.active]="order === 'KLUB'"
+							(click)="setOrder('KLUB')">
+							KLUB<br>
+							<span [hidden]="reverse">▼</span>
+							<span [hidden]="!reverse">▲</span>
+        				</th>
+        				<th [class.active]="order === 'SREDNIA'"
+							(click)="setOrder('SREDNIA')">
+							ŚREDNIA<br>
+							<span [hidden]="reverse">▼</span>
+							<span [hidden]="!reverse">▲</span>
+						</th>
+						<th [class.active]="order === 'BIEGI'"
+							(click)="setOrder('BIEGI')">
+							BIEGI<br>
+							<span [hidden]="reverse">▼</span>
+							<span [hidden]="!reverse">▲</span>
+        				</th>
+        				<th [class.active]="order === 'PKT'"
+							(click)="setOrder('PKT')">
+							PKT<br>
+							<span [hidden]="reverse">▼</span>
+							<span [hidden]="!reverse">▲</span>
+						</th>
+						<th [class.active]="order === 'PKTRYWAL'"
+							(click)="setOrder('PKTRYWAL')">
+							PKTRYWAL<br>
+							<span [hidden]="reverse">▼</span>
+							<span [hidden]="!reverse">▲</span>
+        				</th>
+        				<th [class.active]="order === 'PLUSMINUS'"
+							(click)="setOrder('PLUSMINUS')">
+							+/-<br>
+							<span [hidden]="reverse">▼</span>
+							<span [hidden]="!reverse">▲</span>
+						</th>
+						<th [class.active]="order === 'SREDNIADOM'"
+							(click)="setOrder('SREDNIADOM')">
+							ŚR DOM<br>
+							<span [hidden]="reverse">▼</span>
+							<span [hidden]="!reverse">▲</span>
+        				</th>
+        				<th [class.active]="order === 'BIEGIDOM'"
+							(click)="setOrder('BIEGIDOM')">
+							BIEGI DOM<br>
+							<span [hidden]="reverse">▼</span>
+							<span [hidden]="!reverse">▲</span>
+						</th>
+						<th [class.active]="order === 'SREDNIAWYJAZD'"
+							(click)="setOrder('SREDNIAWYJAZD')">
+							ŚR WYJ<br>
+							<span [hidden]="reverse">▼</span>
+							<span [hidden]="!reverse">▲</span>
+        				</th>
+        				<th [class.active]="order === 'BIEGIWYJAZD'"
+							(click)="setOrder('BIEGIWYJAZD')">
+							BIEGI WYJ<br>
+							<span [hidden]="reverse">▼</span>
+							<span [hidden]="!reverse">▲</span>
+						</th>
+						<th [class.active]="order === 'Z'"
+							(click)="setOrder('Z')">
+							Z<br>
+							<span [hidden]="reverse">▼</span>
+							<span [hidden]="!reverse">▲</span>
+        				</th>
+        				<th [class.active]="order === 'R'"
+							(click)="setOrder('R')">
+							R<br>
+							<span [hidden]="reverse">▼</span>
+							<span [hidden]="!reverse">▲</span>
+						</th>
+						<th [class.active]="order === 'P'"
+							(click)="setOrder('P')">
+							P<br>
+							<span [hidden]="reverse">▼</span>
+							<span [hidden]="!reverse">▲</span>
+        				</th>
+        				<th [class.active]="order === 'WYNIK51'"
+							(click)="setOrder('WYNIK51')">
+							5:1<br>
+							<span [hidden]="reverse">▼</span>
+							<span [hidden]="!reverse">▲</span>
+						</th>
+						<th [class.active]="order === 'WYNIK42'"
+							(click)="setOrder('WYNIK42')">
+							4:2<br>
+							<span [hidden]="reverse">▼</span>
+							<span [hidden]="!reverse">▲</span>
+        				</th>
+        				<th [class.active]="order === 'WYNIK33'"
+							(click)="setOrder('WYNIK33')">
+							3:3<br>
+							<span [hidden]="reverse">▼</span>
+							<span [hidden]="!reverse">▲</span>
+						</th>
+						<th [class.active]="order === 'WYNIK24'"
+							(click)="setOrder('WYNIK24')">
+							2:4<br>
+							<span [hidden]="reverse">▼</span>
+							<span [hidden]="!reverse">▲</span>
+        				</th>
+        				<th [class.active]="order === 'WYNIK15'"
+							(click)="setOrder('WYNIK15')">
+							1:5<br>
+							<span [hidden]="reverse">▼</span>
+							<span [hidden]="!reverse">▲</span>
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr *ngFor="let pair of pgee2017pary | orderBy: order:reverse; let i = index">
+						<td> {{pair.PARA}} </td>
+						<td> {{pair.KLUB}} </td>
+						<td> {{pair.SREDNIA | number:'1.2':'pl'}} </td>
+						<td> {{pair.BIEGI}} </td>
+						<td> {{pair.PKT}} </td>
+						<td> {{pair.PKTRYWAL}} </td>
+						<td> {{pair.PLUSMINUS}} </td>
+						<td> {{pair.SREDNIADOM | number:'1.2':'pl'}} </td>
+						<td> {{pair.BIEGIDOM}} </td>
+						<td> {{pair.SREDNIAWYJAZD | number:'1.2':'pl'}} </td>
+						<td> {{pair.BIEGIWYJAZD}} </td>
+						<td> {{pair.Z}} </td>
+						<td> {{pair.R}} </td>
+						<td> {{pair.P}} </td>
+						<td> {{pair.WYNIK51}} </td>
+						<td> {{pair.WYNIK42}} </td>
+						<td> {{pair.WYNIK33}} </td>
+						<td> {{pair.WYNIK24}} </td>
+						<td> {{pair.WYNIK15}} </td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>

@@ -32,6 +32,16 @@ router.get('/pgee2017',(req,res)=>{
             res.json(response);
         })
     })
-})﻿
+})
+
+router.get('/pgee2017pary',(req,res)=>{
+    connection((db)=>{
+        var database2 = db.db('db_gurustat');
+        database2.collection('pgee2017pary').find().toArray().then((pgee2017pary)=>{
+            response.data = pgee2017pary;
+            res.json(response);
+        })
+    })
+})
 
 module.exports = router;

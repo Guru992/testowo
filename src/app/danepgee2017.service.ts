@@ -9,4 +9,9 @@ export class Danepgee2017Service {
   	getPgee2017() {
   		return this._http.get('/pgee2017').map(result => this.result = result.json().data);
   	}
+
+	getPgee2017pary() {
+  		return this._http.get('/pgee2017pary').map(result => this.result = result.json().data);
+  	}
+
   }
